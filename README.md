@@ -10,9 +10,14 @@ The objective of this project is to develop a machine learning model that can pr
 The notebook is organized as follows: in Section 2, I use descriptive statistics and several visualizations to examine the dataset, develop a better understanding of the features and identify any cleaning or modifications that may be required. Next, I clean the data and address any missing values to prepare the data for building a model. In Section 3, several machine learning models (logistic regression, decision trees and in the end an ensemble method, a random forest method) are built, trained and evaluated based on unified performance metrics. The best model is identified. Section 4 summarizes the performance of the models built in tables and makes three recommendations to stakeholders based on the findings of this study. Section 5 lists the limitations of the current study as well as avenues that one may explore to improve the performance of the model.
 
 ## 2. Data Understanding and Analysis
+The data used in this study contains three subsets: (1) Cleveland, (2) Switzerland and (3) Hungary. After addressing the issue with missing values, 720 entries and 10 attributes remain. 
 
+The features are both numeric and categorical. Therefore, preparation of the data for model development requires care. The problem is boiled down to a binary classification with 0 and 1 representing the absence or presence of heart disease in the individual. Several pipelines were developed to test the following three types of machine learning models: (1) logistic regression, (2) decision trees and (3) random forest. 
+
+For more details on data cleaning, processing and model development, refer to the [Jupyter notebook](https://github.com/setare92-ha/cardiovascular_event_detection/blob/main/main.ipynb) for the project. 
 
 ## 3. Results and Recommendations
+The following table summarizes the test performance of the different models that were developed. For the cross-validation results, refer to the [Jupyter notebook](https://github.com/setare92-ha/cardiovascular_event_detection/blob/main/main.ipynb).
 | Model   | Accuracy   | Precision  | Recall  | $f_1$  | Top-5 Important Features |
 |-----|---|---|---|------| --------- |
 | Logistic Regression  | 0.78  | 0.85  | 0.71  | 0.77  | oldpeak, thalach, cp-4, chol, sex |
@@ -37,3 +42,8 @@ The notebook is organized as follows: in Section 2, I use descriptive statistics
 1. The feature *oldpeak* has a heavily right-skewed distribution as shown in the plots above. Logistic regression assumes normal distribution for the features. Therefore its model assumptions are violated and its predictions may be inaccurate. Moreover, models like decision trees and the random forest method can get affected by such skewedness. In this case, outlier values can dominate the behavior of the model and affect the splits as well as feature importance. A more robust study would use techniques such as logarithmic transformation to reduce skewness in variables and then use them as features. 
 2. In the context of this problem, having false positives is better than having false negatives since if a patient is flagged for susceptibility to heart disease, they will only need more check-ups. However, if they're not flagged while being high-risk, an unnoticed heart disease may occur with serious consequences for the patient. This means that recall is more important to us compared to precision. Therefore, one could repeat the hyperparameter tuning exercises using "recall" as the metric to optimize for.
 3. Other powerful methods such as K-Means clustering or neural networks may be explored for improving the performance.
+
+# Resources
+- Jupyter notebook: [link](https://github.com/setare92-ha/cardiovascular_event_detection/blob/main/main.ipynb)
+- presentation: [link]()
+
