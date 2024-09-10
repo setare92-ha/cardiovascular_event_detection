@@ -45,5 +45,5 @@ The following table summarizes the test performance of the different models that
 
 # Resources
 - Jupyter notebook: [link](https://github.com/setare92-ha/cardiovascular_event_detection/blob/main/main.ipynb)
-- presentation: [link]()
+- presentation: [link](https://github.com/setare92-ha/cardiovascular_event_detection/blob/main/phase_iii_presentation_SH.pdf)
 
