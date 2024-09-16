@@ -43,12 +43,12 @@ The following table summarizes the test performance of the different models that
 2. In the context of this problem, having false positives is better than having false negatives since if a patient is flagged for susceptibility to heart disease, they will only need more check-ups. However, if they're not flagged while being high-risk, an unnoticed heart disease may occur with serious consequences for the patient. This means that recall is more important to us compared to precision. Therefore, one could repeat the hyperparameter tuning exercises using "recall" as the metric to optimize for.
 3. Other powerful methods such as K-Means clustering or neural networks may be explored for improving the performance.
 
-# Resources
+## Resources
 - Data: [link](https://archive.ics.uci.edu/dataset/45/heart+disease) 
 - Jupyter notebook: [link](https://github.com/setare92-ha/cardiovascular_event_detection/blob/main/main.ipynb)
 - presentation: [link](https://github.com/setare92-ha/cardiovascular_event_detection/blob/main/phase_iii_presentation_SH.pdf)
 
-# Navigating the Repository
+## Navigating the Repository
 - zipped_data
 - figures
 - images
